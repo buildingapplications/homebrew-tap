@@ -5,20 +5,20 @@
 class Bilt < Formula
   desc "Build and install your Bilt app on your iPhone"
   homepage "https://bilt.me"
-  version "0.1.0"
+  version "0.2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/buildingapplications/bilt-cli/releases/download/v0.1.0/bilt-cli_darwin_amd64.tar.gz"
-      sha256 "f7d59032601ea76783450af21ee3123d2912992a49d3cd0211248ef157a6e0d8"
+      url "https://github.com/buildingapplications/bilt-cli/releases/download/v0.2.0/bilt-cli_darwin_amd64.tar.gz"
+      sha256 "ad14b206501a14ecd8e8d65e4b4675bb7d5b25b00b719806c58a91be29e9f280"
 
       define_method(:install) do
         bin.install "bilt"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/buildingapplications/bilt-cli/releases/download/v0.1.0/bilt-cli_darwin_arm64.tar.gz"
-      sha256 "1039059828bf3ce8701600afd387ae51c23ccbe2359ea4f4e62aec3fa7285a42"
+      url "https://github.com/buildingapplications/bilt-cli/releases/download/v0.2.0/bilt-cli_darwin_arm64.tar.gz"
+      sha256 "f6937204e650c45685b2178a767a4dbecd553e8b1a6c03ef8b1db645b13b2bc3"
 
       define_method(:install) do
         bin.install "bilt"
@@ -28,15 +28,15 @@ class Bilt < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/buildingapplications/bilt-cli/releases/download/v0.1.0/bilt-cli_linux_amd64.tar.gz"
-      sha256 "d5ff33f989b43958bb468e308cb2a5ea6559536b883a9ae1ab9c9b5063c91ac8"
+      url "https://github.com/buildingapplications/bilt-cli/releases/download/v0.2.0/bilt-cli_linux_amd64.tar.gz"
+      sha256 "ef3023ac3f6f07029e1118918ff7a5275b01fe53bee142a051e89b24e32e3b62"
       define_method(:install) do
         bin.install "bilt"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/buildingapplications/bilt-cli/releases/download/v0.1.0/bilt-cli_linux_arm64.tar.gz"
-      sha256 "96f1464a578f02a63043bbb2ce9ce8428a5de94f356bd5be2e96164c5b719edc"
+      url "https://github.com/buildingapplications/bilt-cli/releases/download/v0.2.0/bilt-cli_linux_arm64.tar.gz"
+      sha256 "6b6d80964269dc62870d0d7ee70d135135d19a28881084fcf7ed2cd59e1ef980"
       define_method(:install) do
         bin.install "bilt"
       end
